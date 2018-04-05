@@ -21,7 +21,12 @@ const client = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
-    module: moduleObj
+    module: moduleObj,
+    plugins: [
+    new HtmlWebPackPlugin({
+      template: 'src/client/index.html'
+    })
+  ]
 };
 
 const server = {
